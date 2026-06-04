@@ -4,3 +4,4 @@ whitenoise>=6
 Pillow
 requests
 matplotlib
+pytz
