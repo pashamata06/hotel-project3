@@ -1,4 +1,5 @@
 {% extends 'hotel/base.html' %}
+{% load static %}
 {% block title %}Контакты{% endblock %}
 {% block content %}
 <h2>👥 Наши сотрудники</h2>
@@ -7,7 +8,7 @@
     {% for employee in employees %}
         <div class="employee-card" style="background: white; border-radius: 16px; padding: 25px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
             {% if employee.photo %}
-                <img src="{{ employee.photo.url }}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #667eea;">
+               <img src="{% static 'hotel/img/jonny_joka-greece-6773682_1920.jpg' %}"
             {% else %}
                 <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: white;">👤</div>
             {% endif %}
